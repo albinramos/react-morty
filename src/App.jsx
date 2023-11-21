@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import RickMorty from './rickMortyComponent';
+import RandomStories from './randomStories';
 import './App.css'
 
 function App() {
@@ -78,6 +79,7 @@ const goToPrevious = () =>{
           <RickMorty key={rickmorty.id} data ={rickmorty} />
         ))}
       </section>
+      <RandomStories characterList={rickMortyData} />
     </>
   )
 }
