@@ -46,8 +46,8 @@ function App() {
       const data = await fetch(currentUrl);
       const results = await data.json();
       console.log(results);
-      setNextUrl(results.next);
-      setPreviousUrl(results.previous);
+      setNextUrl(results.info.next);
+      setPreviousUrl(results.info.prev);
       setRickMortyList(results.results);
   } 
   catch (e){
