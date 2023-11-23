@@ -93,7 +93,7 @@ const RandomStories = ({ characterList }) => {
       {characterList.length > 0 ? (
         <ul>
           {characterList.map((character) => (
-            <li key={character.id}>
+            <li className= "li-storie" key={character.id}>
               <input
                 type="checkbox"
                 id={`character-${character.id}`}

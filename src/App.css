@@ -101,7 +101,7 @@
   transform: scale(1.1);
 }
 
-.li-status, .li-species{
+.li-status, .li-species, .li-storie{
   list-style: none;
   color: rgb(203, 203, 203);
   margin-right: 35px;
