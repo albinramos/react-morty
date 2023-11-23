@@ -26,9 +26,9 @@ body {
   background: radial-gradient(circle, rgba(133,192,69,1) 0%, rgba(19,139,68,1) 34%);
 }
 
-.button-prev, .button-next {
+.button-prev, .button-next, .button-history {
   border-radius: 8px;
-  /* border: 1px solid transparent; */
+  border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 700;
@@ -42,7 +42,7 @@ body {
   width: 30%;
 }
 
-.button-prev, .button-next {
+.button-prev, .button-next, .button-history {
 	color: #138B44;
 	cursor: pointer;
 	border: 2px solid #D2E054;
@@ -50,22 +50,52 @@ body {
 }
 
 .fav-button{
-  
+  color: #138B44;
+	cursor: pointer;
+	border: 2px solid #D2E054;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  border-radius: 8px;
+  /* border: 1px solid transparent; */
+  padding: 0.6em 1.2em;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: inherit;
+  background-color: #D2E054;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 60%;
+  margin: auto;
 }
 
-.button-prev, .button-next:hover {
+.button-next:hover {
 	color: #D2E054;
 	background-color: transparent;
 	text-shadow: nfour;
 }
+
+.button-prev:hover{
+  color: #D2E054;
+	background-color: transparent;
+	text-shadow: nfour;
+}
+
+.button-history:hover{
+  color: #D2E054;
+	background-color: transparent;
+	text-shadow: nfour;
+}
+
 .button-prev, .button-next:hover:before {
 	right: 0%;
 	left: auto;
-	width: 100%;
+	/* width: 100%; */
 }
 .button-prev, .button-next:before {
 	
-	background: #108A43;
+	background: #D2E054;
 	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
@@ -77,6 +107,14 @@ body {
 
   .button-prev, .button-next{
     width: 30%;
+  }
+
+  .historia{
+    display: flex;
+  }
+  
+  .dcha-historia, .izq-historia{
+    width: 50%;
   }
 
 }

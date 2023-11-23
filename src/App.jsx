@@ -47,7 +47,7 @@ function App() {
   useEffect(() => {
     const favs = obtenerFavoritos();
     setFavoritos(favs);
-  }, [favoritos]);
+  }, []);
 
   const getRickMortyData = async () => {
     try {
@@ -91,8 +91,13 @@ function App() {
     <>
       <img className="logo-home" src="/public/rick-and-morty-31013.png" alt="Logo de Rick and Morty"></img>
       <p className="error">{error}</p>
-      {rickMortyData.length !== 0 && previousUrl && <button onClick={goToPrevious}>Previous</button>}
-      {rickMortyData.length !== 0 && nextUrl && <button onClick={goToNext}>Next</button>}
+      <div>
+      <a href="#cards">Personajes</a>
+      <a href="#history">Generador de historias</a>
+      <a  href="#fav">Favoritos</a>
+      </div>
+      {rickMortyData.length !== 0 && previousUrl && <button className="button-prev" onClick={goToPrevious}>Anterior</button>}
+      {rickMortyData.length !== 0 && nextUrl && <button className="button-next" onClick={goToNext}>Siguiente</button>}
       {rickMortyData.length === 0 &&
         <img className='img-loading' src="/public/rickmorty.png" alt="Cargando"></img>
       }
@@ -101,17 +106,21 @@ function App() {
       }
       <section className='rickmorty-container'>
         {rickMortyData.map((rickmorty) => (
-          <RickMorty key={rickmorty.id} data={rickmorty} agregarAFavoritos={agregarAFavoritos} />
+          <RickMorty key={rickmorty.id} data={rickmorty} agregarAFavoritos={agregarAFavoritos} favoritos={favoritos} />
         ))}
       </section>
+      {rickMortyData.length !== 0 && previousUrl && <button className="button-prev" onClick={goToPrevious}>Anterior</button>}
+      {rickMortyData.length !== 0 && nextUrl && <button className="button-next" onClick={goToNext}>Siguiente</button>}
       <RandomStories characterList={rickMortyData} />
       <section className='favoritos-container'>
         <h2>Favoritos</h2>
+        <div className='div-fav-container'>
         {favoritos.map((favorito) => (
-          <div key={favorito.id}>
+          <div className="div-fav" key={favorito.id}>
             <p>Nombre: {favorito.nombre}</p>
-          </div>
+            </div>
         ))}
+        </div>
       </section>
     </>
   )

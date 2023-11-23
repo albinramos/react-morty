@@ -87,13 +87,15 @@ const RandomStories = ({ characterList }) => {
   };
 
   return (
-    <div>
+    <>
     <h1>Generador de historias</h1>
+    <div className='historia'>
+    <div className='izq-historia'>
       <h2>Seleccionar Personajes</h2>
       {characterList.length > 0 ? (
         <ul>
           {characterList.map((character) => (
-            <li className= "li-storie" key={character.id}>
+            <li className= "li-story" key={character.id}>
               <input
                 type="checkbox"
                 id={`character-${character.id}`}
@@ -107,11 +109,14 @@ const RandomStories = ({ characterList }) => {
       ) : (
         <p>Cargando lista de personajes...</p>
       )}
-      <button onClick={generateRandomStory}>Generar Historia</button>
-      <hr />
+      </div>
+      <div className='dcha-historia'>
       <h2>{randomStory ? randomStory.title : 'Historia Aleatoria'}</h2>
-      {randomStory && <p>{randomStory.content}</p>}
+      {randomStory && <p className='random-story'>{randomStory.content}</p>}
+      </div>
     </div>
+    <button className="button-history" onClick={generateRandomStory}>Generar Historia</button>
+    </>
   );
 };
 

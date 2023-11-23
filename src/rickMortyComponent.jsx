@@ -1,21 +1,19 @@
 
 import React, { useState, useEffect } from 'react';
-import { agregarAFavoritos, obtenerFavoritos } from './favoriteComponent';
 
 
 
 
-const RickMorty = ({ data }) => {
+const RickMorty = ({ data, agregarAFavoritos, favoritos }) => {
   const [loaded, setLoaded] = useState(false);
   const [favorito, setFavorito] = useState(false);
   const className = `rickmorty-card${loaded ? '' : ' hidden'}`;
 
   useEffect(() => {
     // Verificar si el personaje está en favoritos al cargar el componente
-    const favoritos = obtenerFavoritos();
     const existeEnFavoritos = favoritos.some((fav) => fav.id === data.id);
     setFavorito(existeEnFavoritos);
-  }, [data.id]);
+  }, [data]); 
 
   const handleAgregarFavorito = () => {
     // Agregar o quitar el personaje de favoritos
@@ -49,7 +47,7 @@ const RickMorty = ({ data }) => {
             )}
           </ul>
           <button className="fav-button" onClick={handleAgregarFavorito}>
-            {favorito ? 'No favorito' : 'favorito'}
+            {favorito ? 'No favorito' : 'Favorito'}
           </button>
         </div>
         <div className="ladoDer">
