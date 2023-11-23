@@ -88,7 +88,7 @@ const RandomStories = ({ characterList }) => {
 
   return (
     <>
-    <h1>Generador de historias</h1>
+    <h1 id="history">Generador de historias</h1>
     <div className='historia'>
     <div className='izq-historia'>
       <h2>Seleccionar Personajes</h2>

@@ -113,7 +113,7 @@ function App() {
       {rickMortyData.length !== 0 && nextUrl && <button className="button-next" onClick={goToNext}>Siguiente</button>}
       <RandomStories characterList={rickMortyData} />
       <section className='favoritos-container'>
-        <h2>Favoritos</h2>
+        <h2 id="fav" >Favoritos</h2>
         <div className='div-fav-container'>
         {favoritos.map((favorito) => (
           <div className="div-fav" key={favorito.id}>
