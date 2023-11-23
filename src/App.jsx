@@ -69,8 +69,8 @@ const goToPrevious = () =>{
     <>
       <img className="logo-home" src="/public/rick-and-morty-31013.png"></img>
       <p className="error">{error}</p>
-      {rickMortyData.length !== 0 && previousUrl && <button onClick={goToPrevious}>Previous</button>}
-      {rickMortyData.length !== 0 && nextUrl && <button onClick={goToNext}>Next</button>}
+      {rickMortyData.length !== 0 && previousUrl && <button className="button-prev" onClick={goToPrevious}>Previous</button>}
+      {rickMortyData.length !== 0 && nextUrl && <button className="button-next" onClick={goToNext}>Next</button>}
       {rickMortyData.length === 0 && 
       <img className='img-loading' src="/public/rickmorty.png" />
       }

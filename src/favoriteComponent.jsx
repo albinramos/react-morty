@@ -17,10 +17,6 @@ const obtenerFavoritos = () => {
     return JSON.parse(localStorage.getItem('favoritos')) || [];
   };
   
-
-
-
-
   export {
     agregarAFavoritos,
     obtenerFavoritos

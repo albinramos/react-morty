@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { agregarAFavoritos, obtenerFavoritos } from './favoriteComponent';
 
+
+
+
 const RickMorty = ({ data }) => {
   const [loaded, setLoaded] = useState(false);
   const [favorito, setFavorito] = useState(false);
@@ -45,6 +48,9 @@ const RickMorty = ({ data }) => {
               </li>
             )}
           </ul>
+          <button className="fav-button" onClick={handleAgregarFavorito}>
+            {favorito ? 'No favorito' : 'favorito'}
+          </button>
         </div>
         <div className="ladoDer">
           <img
@@ -53,9 +59,6 @@ const RickMorty = ({ data }) => {
             alt={`imagen de ${data.name}`}
             onLoad={() => setLoaded(true)}
           />
-          <button onClick={handleAgregarFavorito}>
-            {favorito ? 'Quitar de favoritos' : 'Agregar a favoritos'}
-          </button>
         </div>
       </div>
     </article>
