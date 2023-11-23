@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import RickMorty from './rickMortyComponent';
+import RandomStories from './randomStories';
 import './App.css'
 
 function App() {
@@ -81,8 +82,7 @@ const goToPrevious = () =>{
           <RickMorty key={rickmorty.id} data ={rickmorty} />
         ))}
       </section>
-      {rickMortyData.length !== 0 && previousUrl && <button onClick={goToPrevious}>Previous</button>}
-      {rickMortyData.length !== 0 && nextUrl && <button onClick={goToNext}>Next</button>}
+      <RandomStories characterList={rickMortyData} />
     </>
   )
 }
