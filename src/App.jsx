@@ -66,18 +66,23 @@ const goToPrevious = () =>{
 
   return (
     <>
-      <h1>RICK & MORTY</h1>
+      <img className="logo-home" src="/public/rick-and-morty-31013.png"></img>
       <p className="error">{error}</p>
       {rickMortyData.length !== 0 && previousUrl && <button onClick={goToPrevious}>Previous</button>}
       {rickMortyData.length !== 0 && nextUrl && <button onClick={goToNext}>Next</button>}
       {rickMortyData.length === 0 && 
-      <p>Loading data...</p>
+      <img className='img-loading' src="/public/rickmorty.png" />
+      }
+      {rickMortyData.length === 0 && 
+      <h2 className='h2-loading'>LOADING...</h2>
       }
       <section className='rickmorty-container'>
         {rickMortyData.map((rickmorty) => (
           <RickMorty key={rickmorty.id} data ={rickmorty} />
         ))}
       </section>
+      {rickMortyData.length !== 0 && previousUrl && <button onClick={goToPrevious}>Previous</button>}
+      {rickMortyData.length !== 0 && nextUrl && <button onClick={goToNext}>Next</button>}
     </>
   )
 }

@@ -11,21 +11,6 @@
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
@@ -49,32 +34,108 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  overflow: hidden;
 }
 
 
 .rickmorty-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out; 
+  width: 400px;
+  height: 290px;
+  margin: 40px auto;
+  display: block;
+  border-radius: 10px;
+  border: 8px solid black;
+  overflow: hidden;
+}
+
+.character-name{
+  color: #D2E054;
+  font-size: 25px;
 }
 
 
-.rickmorty-card:hover {
-  transform: scale(1.05); 
+/* .rickmorty-card:hover {
+  transform: scale(1.02); 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
-}
+} */
 
+.container-card{
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
 
 .rickmorty-card h3 {
   margin-bottom: 10px;
+  color: rgb(203, 203, 203);
+}
+
+.ladoIzq, .ladoDer {
+  width: 100%;
+}
+
+.ladoDer{
+  overflow: hidden;
+}
+
+.ladoDer img {
+  width: 100%;
+  height: 300px;
+  border-style: none;
+  transition: 1s ease;
+}
+
+.ladoIzq {
+  background: black;
+  color: white;
 }
 
 
 .rickmorty-card img {
   max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 100%;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.rickmorty-card img:hover{
+  transform: scale(1.1);
+}
+
+.li-status, .li-species{
+  list-style: none;
+  color: rgb(203, 203, 203);
+  margin-right: 35px;
+}
+
+ul > li{
+  text-align:center;
+}
+
+
+.logo-home{
+  width: 50%;
+}
+
+.img-loading{
+  width: 200px;
+}
+
+.h2-loading{
+  color: #D2E054;
+}
+
+@media screen and (min-width: 768px){
+
+  .logo-home{
+    width: 35%;
+  }
+
+}
+
+@media screen and (min-width: 1024px){
+
+  .logo-home{
+    width: 30%;
+  }
+
 }
