@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import RickMorty from './rickMortyComponent';
 import RandomStories from './randomStories';
-/* import './App.css' */
+import './App.css'
 
 function App() {
   const [rickMortyList, setRickMortyList] = useState([]);
