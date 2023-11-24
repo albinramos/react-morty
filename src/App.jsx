@@ -91,7 +91,7 @@ function App() {
     <>
       <img className="logo-home" src="/public/rick-and-morty-31013.png" alt="Logo de Rick and Morty"></img>
       <p className="error">{error}</p>
-      <div>
+      <div className='div-nav'>
       <a href="#cards">Personajes</a>
       <a href="#history">Generador de historias</a>
       <a  href="#fav">Favoritos</a>

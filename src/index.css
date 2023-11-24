@@ -12,6 +12,7 @@ a {
   color: black;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #D2E054;
 }

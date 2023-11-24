@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+.div-nav{
+  display: flex;
+  flex-direction: column;
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -170,6 +176,17 @@ a{
   .div-fav-container{
     width: 80%;
     margin: auto;
+  }
+
+  a{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .div-nav{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
   }
 
 }
