@@ -47,7 +47,7 @@ const RickMorty = ({ data, agregarAFavoritos, favoritos }) => {
             )}
           </ul>
           <button className="fav-button" onClick={handleAgregarFavorito}>
-            {favorito ? 'No favorito' : 'Favorito'}
+            {favorito ? 'Eliminar de favoritos' : 'Añdadir a favoritos'}
           </button>
         </div>
         <div className="ladoDer">
