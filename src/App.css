@@ -178,15 +178,15 @@ a{
     margin: auto;
   }
 
-  a{
+   a{
     display: flex;
     flex-direction: row;
+    font-size: 18px;
   }
-
   .div-nav{
     display: flex;
     flex-direction: row;
-    text-align: center;
+   justify-content: center;
   }
 
 }
